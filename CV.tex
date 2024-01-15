@@ -1,0 +1,158 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Leonardo Marques} \\[6pt]
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{} C @{} C}
+{{\raisebox{-0.05\height}{\faEnvelope} leosouzaam@hotmail.com}} 
+{{\raisebox{-0.05\height}{\faMobile} +55 (48) 984-654-977}} 
+{{\href{https://www.linkedin.com/in/nameisjamiele}{\raisebox{-0.05\height}{\faLinkedin} https://www.linkedin.com/in/leonardo-de-sousa-marques/}}}
+\end{tabularx}
+
+%EDUCATION
+\section{\textbf{EDUCATION}}
+\begin{tabularx}{\linewidth}{ @{}l r@{}}
+\textbf{Federal University of Santa Catarina (UFSC)} \hfill \textbf{Aug 2023 - Present} \\[4pt]
+\textbf{Bachelor's Degree in Computer Science}\\[0.5pt]
+\\ 
+\textbf{Federal Institute of Santa Catarina (IFSC)} \hfill \textbf{Jul 2019 - Jul 2023}\\[4pt]
+\textbf{Technician's Degree in Electrotechnics}\\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Honors/Academic recognition: Highest GPA of the course (GPA: 9.8)
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+%EXPERIENCE
+\section{\textbf{EXPERIENCE}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Energiluz Engenharia (Energiluz Engineering)} - São José, Santa Catarina, Brazil \hfill \textbf{Jul 2022 - Jun 2023} \\[4pt]
+\item Energiluz Engenharia is a Brazilian company focused on providing electrical engineering assistance, especially concerning \\ public lighting issues through the government of the state of Santa Catarina. \\[4pt]
+\textbf{Electrical Engineering Intern} \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item I worked in the Engineering department and my main responsibility was to create the electrical projects, with AutoCAD and Dialux, for the maintenance team. In these projects, I specified which poles were to receive determined lighting fixtures. 
+        \item I was also responsible for testing the lamps to determine the best fit for each project, considering factors such as power factor, voltage drop, and other electrical characteristics.
+        \item This internship was undertaken with the primary objective of obtaining my technician's degree at IFSC. The final report received an A+ (100) grade from the responsible professor.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Federal Institute of Santa Catarina} - Florianópolis, Santa Catarina, Brazil \hfill \textbf{Jun 2021 - Mar 2022} \\[4pt]
+\textbf{Teaching Assistant of Chemistry} \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item I worked as a Teaching Assistant in the Department of Language, Technology, Education and Science (DALTEC) at IFSC, where my responsibilities included teaching Chemistry in the context of Olympiad fields.
+        \item I specifically worked with the final high school courses at the Institute, concentrating on the Catarinense Chemistry Olympiad (OCQ) and the Brazilian Chemistry Olympiad (OBQ).
+        \item The final report of this experience was presented during the National Science and Technology Week (SNCT) of 2022 at IFSC.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% ACADEMIC PROJECTS
+\section{\textbf{ACADEMIC PROJECTS}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\href{https://github.com/leonardosm14/Playlist-Generator}{The Sequences Game - Grade: A+}} \\[4pt]
+\textbf{Dec - 2023} \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item This project was developed for the Digital Circuits class (UFSC) and involves a game coded in VHDL that can be played on an FPGA board by two players.
+        \item Given two parameters by the first player, a sequence of four numerical values is displayed. The second player needs to set the FPGA's switches to match the fifth value of the sequence. Depending on the chosen game level, an incorrect match will result in a loss of points.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\href{https://github.com/leonardosm14/Playlist-Generator}{Playlist Generator - Grade: A+}} \\[4pt]
+\textbf{Nov - 2023} \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item This project was developed for the Object-Oriented Programming class (UFSC). Its primary objective is to generate a Spotify playlist based on a specified number of songs with chosen artists.
+        \item The program was coded in Python and its interface was created using the Tkinter library. The search function within the app utilized the Spotipy library.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+\\
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\href{https://github.com/leonardosm14/EsteiraSeparadoraCLP}{Sortation Conveyor - Grade: A+}} \\[4pt]
+\textbf{Jun - 2022} \\[4pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item This project was developed for the Industrial Commands class (IFSC). It was designed to be implemented on a Programmable Logic Controller (PLC) and was coded using Ladder Logic. Given three different heights and two different materials (metal or plastic), the conveyor will either retain or discard the object.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\\
+%ADDITIONAL
+\section{\textbf{ADDITIONAL}}
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Technical Skills: Python, C, C++ and VHDL.
+        \item Language Skills: English (Advanced), Portuguese 
+        (Native) and Spanish (Conversational).
+        \item Awards: Silver medal winner of the Mathematics Olympiad of the Federal Institutions and of the Brazilian Mathematics Olympiad.
+    \end{itemize}
+\end{minipage}
+
+\end{document}
